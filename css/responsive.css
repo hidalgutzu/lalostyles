@@ -19,12 +19,20 @@
     H5 {
         margin: 0;
     }
+    p {
+        font-size: 1.1em;
+        font-weight: normal;
+    }
+
 /* CLASES --- */
     /* --- start buttons */
     .botonPrimario {
         box-shadow: none;
     }
     /* --- end buttons */
+    .br_null, .hidden {
+        display: none;
+    }
 
     /* ::: HEADER ::: */
     .header-menuNav {
@@ -90,6 +98,25 @@
     }
     .signupform input[type=email], .signupform button {
         width: 80%;
+    }
+
+    /* ::: FOOTER ::: */
+    .footer {
+        height: 100%;
+        flex-direction: column;
+    }
+    .paypal {
+        margin: 25px 0;
+    }
+    .footer-menu {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .footer-clima {
+        width: 100%;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.25);
     }
     
  }
