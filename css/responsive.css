@@ -16,6 +16,9 @@
     H2, H4 {
         font-size: 18px;
     }
+    H5 {
+        margin: 0;
+    }
 /* CLASES --- */
     /* --- start buttons */
     .botonPrimario {
@@ -52,7 +55,7 @@
         border-bottom: 0;
         transform: none;
     }
-    
+
     /* ::: REVIEWS ::: */
     .reviews {
         width: 75%;
@@ -71,4 +74,22 @@
         top: -55px;
         transform: scale(0.7);
     }
+
+    /* ::: SIGNUP FORM ::: */
+    .signupform .form {
+        flex-direction: column;
+    }
+    .signupform h5 {
+        margin: 20px 0 15px 0;
+    }
+    .signupform ::placeholder {
+        text-align: center;
+    }
+    .signupform input[type=email] {
+        margin: 0 0 7px 0;
+    }
+    .signupform input[type=email], .signupform button {
+        width: 80%;
+    }
+    
  }
