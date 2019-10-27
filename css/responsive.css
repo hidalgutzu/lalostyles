@@ -35,6 +35,9 @@
     }
 
     /* ::: HEADER ::: */
+    .header {
+        height: 80vh;
+    }
     .header-menuNav {
         display: none;
     }
@@ -43,6 +46,7 @@
         height: 100vh;
     }
     .hero-description {
+        margin: 0 auto;
         width: 80%;
     }
     /* ::: SERVICES ::: */
