@@ -45,7 +45,7 @@
     /* ::: SERVICES ::: */
     .services {
         justify-content: center;
-        height: 700px
+        height: 100vh;
     }
     .servicesContenedor {
         flex-wrap: wrap;
