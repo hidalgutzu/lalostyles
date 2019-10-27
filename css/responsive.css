@@ -39,6 +39,9 @@
         display: none;
     }
     /* ::: HERO ::: */
+    .heroContenedor {
+        height: 100vh;
+    }
     .hero-description {
         width: 80%;
     }
