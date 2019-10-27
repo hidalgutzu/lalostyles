@@ -50,7 +50,7 @@ H1 {
     font-weight: normal;
 }
 H2 {
-    background-color: var(--negro);
+    background-color: rgba(0,0,0,0.85);
     color: var(--color_primario);
     letter-spacing: 0.04em;
     font-style: italic;

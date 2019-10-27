@@ -39,6 +39,9 @@
         display: none;
     }
     /* ::: HERO ::: */
+    .hero-description {
+        width: 80%;
+    }
     /* ::: SERVICES ::: */
     .services {
         justify-content: center;
@@ -121,6 +124,10 @@
         text-align: center;
         width: 100%;
         margin-bottom: 25px;
+    }
+    .footer-menu ul {
+        border-right: none;
+        padding-right: none;
     }
     .footer-menu ul li {
         font-weight: normal; 
