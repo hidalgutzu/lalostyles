@@ -11,7 +11,8 @@
  @media (max-width: 575.98px) { 
  /* ETIQUETAS --- */   
     H1 {
-        font-size: 65px;
+        font-size: 6em;
+        line-height: 0.8em;
     }
     H2, H4 {
         font-size: 18px;
@@ -33,20 +34,27 @@
     .br_null, .hidden {
         display: none;
     }
+    .br_null_dtop {
+        display: initial;
+    }
 
     /* ::: HEADER ::: */
     .header {
-        height: 80vh;
+        background-size: cover;
+        height: 100vh;
     }
     .header-menuNav {
         display: none;
     }
     /* ::: HERO ::: */
+    .hero {
+        margin-top: 0;
+    }
     .heroContenedor {
         height: 100vh;
     }
     .hero-description {
-        margin: 0 auto;
+        margin: 20px auto;
         width: 80%;
     }
     /* ::: SERVICES ::: */
@@ -133,8 +141,8 @@
         margin-bottom: 25px;
     }
     .footer-menu ul {
-        border-right: none;
-        padding-right: none;
+        border-right: 0;
+        padding-right: 0;
     }
     .footer-menu ul li {
         font-weight: normal; 
