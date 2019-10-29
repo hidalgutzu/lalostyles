@@ -40,12 +40,12 @@
 
     /* ::: HEADER ::: */
     .header {
-        background-size: cover;
+        background-size: 500px;
     }
     .header-menuNav {
         display: none;
     }
-    /* ::: HERO ::: */
+    /* ::: HEADER > HERO */
     .hero {
         margin-top: 0;
     }
