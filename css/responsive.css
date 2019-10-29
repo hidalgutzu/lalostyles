@@ -41,7 +41,6 @@
     /* ::: HEADER ::: */
     .header {
         background-size: cover;
-        min-height: 100%;
     }
     .header-menuNav {
         display: none;
