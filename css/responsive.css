@@ -40,7 +40,8 @@
 
     /* ::: HEADER ::: */
     .header {
-        background-size: 500px;
+        background-size: cover;
+        min-height: 100%;
     }
     .header-menuNav {
         display: none;
