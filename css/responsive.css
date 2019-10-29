@@ -41,7 +41,6 @@
     /* ::: HEADER ::: */
     .header {
         background-size: cover;
-        height: 100vh;
     }
     .header-menuNav {
         display: none;
@@ -51,7 +50,7 @@
         margin-top: 0;
     }
     .heroContenedor {
-        height: 80vh;
+        height: 75vh;
     }
     .hero-description {
         margin: 20px auto;

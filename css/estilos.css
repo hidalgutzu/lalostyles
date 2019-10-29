@@ -111,7 +111,7 @@ p {
 
 /* ::::::::::: HEADER ::::::::::: */
 .header {
-    background: url(../images/home/bkgr-home-01@2x.png) no-repeat center top fixed;
+    background: url(../images/home/bkgr-home-01@2x.png) no-repeat top center fixed;
     background-size: 950px;
     height: 100vh;
 }
