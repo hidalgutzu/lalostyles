@@ -149,15 +149,12 @@ ul.header-social a {
     line-height: auto;
     display: inline;
 }
-.fa-facebook-f, .fa-instagram, .fa-whatsapp, .fa-pen-square {
+.fa-facebook-f, .fa-instagram, .fa-whatsapp, .fa-user-edit{
     transition: var(--transicion);
 }
 ul.header-social a:hover ..fa-pen-square, ul.header-social a:hover .fa-facebook-f, ul.header-social a:hover .fa-instagram, ul.header-social a:hover .fa-whatsapp {
     transition: var(--transicion);
 }
-.fa-pen-square {
-    font-size: 1.5em;
-} 
 ul.header-social a:hover .fa-facebook-f {
     color: #1877f2;
 }

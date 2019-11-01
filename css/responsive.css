@@ -93,9 +93,10 @@
         transition: var(--transicion);
     }
     .burger-button::after {
-        font-family: "FontAwesome";
+        font-family: 'Font Awesome\ 5 Free';
         content: "\f0c9";
         font-size: 2em;
+        font-weight: 900;
         padding: 16px;
     }
     .burger-button:hover {
@@ -128,6 +129,11 @@
         display: inline-block;
         width: 40%;
     }
+    .fa-user-edit{
+        font-size: 1.7em;
+        vertical-align: middle;
+        margin-right: -4px;
+    } 
     .fa-facebook-f, .fa-instagram {
         display: none;
     }
@@ -143,6 +149,7 @@
         margin-right: 0;
     }
     ul.header-social a .fa-whatsapp {
+        color: #25d366;
         padding: 14px 10px 14px;
     }
     .fa-whatsapp::before {
