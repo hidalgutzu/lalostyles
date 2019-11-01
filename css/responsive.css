@@ -34,7 +34,7 @@
     }
     /* --- start buttons */
     .botonPrimario {
-        padding: 15px;
+        padding: 16px 15px 15px;
     }
     a.boton-cerrar {
         position: absolute;
@@ -145,7 +145,7 @@
         padding: 0;
     }
     ul.header-social {
-        padding: 18px 0 15px;
+        padding: 18px 0 14px;
         margin-right: 0;
     }
     ul.header-social a .fa-whatsapp {
@@ -157,7 +157,7 @@
     }
     /* --- Header > Hero */
     .hero {
-        margin-top: 0;
+        margin-top: 15%;
     }
     .heroContenedor {
         height: 75vh;
