@@ -17,40 +17,46 @@
 <body class="avion">
 <!-- ------------------------------------------ Header -->
     <header class="header">
+        <div class="pleca-blanca hidden-desktop"></div>
         <div class="headerContainer">
-            <img class="header-logo fadeInDown" src="images/lalostyles-travel-services-logo.svg" alt="Lalostyles Travel Services">
+            <img class="header-logo-mobile fadeInDown hidden-desktop" src="images/lalostyles-logo.svg" alt="Lalostyles Travel Services">
+            <img class="header-logo fadeInDown hidden" src="images/lalostyles-travel-services-logo.svg" alt="Lalostyles Travel Services">
             <div class="header-socialAndQuote">
                 <ul class="header-social">
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
-                <button class="botonPrimario">Get a Quote</button>
+                <button class="botonPrimario hidden">Get a Quote</button>
+                <a class="botonPrimario pen-square hidden-desktop" href="#"><i class="fas fa-pen-square"></i></a>
             </div>
         </div>
 <!-- --------------- Nav -->
-        <nav class="header-menuNav fadeInDown">
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="#">Transfers</a></li>
-                <li><a href="#">Groups</a></li>
-                <li><a href="#">Reviews</a></li>
-            </ul>
-        </nav>
+        <span class="burger-button"></span>
+        <div class="burger-menu">
+            <a href="#" class="hidden-desktop boton-cerrar"></a>
+            <nav class="header-menuNav fadeInDown">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Transfers</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </nav>    
+        </div>
 <!-- --------------- Hero -->
         <div class="heroContenedor">
             <section class="hero">
                 <h2 class="hero-description fadeInDelay"><strong>The best option with style in Travel Services</strong></h2>
-                <h1 class="hero-title fadeInDelay1">Our style... <br class="br_null_dtop">your style!</h1>
+                <h1 class="hero-title fadeInDelay1">Our style... <br class="br-null-desktop">your style!</h1>
                 <div class="hero-autor fadeInUpDelay">
                     <img class="hero-autorImg" src="images/home/eduardo-calderon.png" alt="Eduardo Calderón - Lalostyles">
                     <div class="hero-autorContenedor">
                         <span class="hero-autorName">CEO - Lalo Calderón</span>
-                        <span class="hero-autorInfo">Transforming the DMC into DMCC!</span>
+                        <small class="hero-autorInfo">Transforming the DMC into DMCC!</small>
                     </div> 
                 </div>
-                <!-- <div class="hero-flecha"><i class="fa-bounce fas fa-chevron-down"></i></div> -->
                 <div class="mouse">
                     <a href="" class="mouse-icon">
                         <div class="mouse-wheel"></div>
@@ -89,7 +95,7 @@
 <!-- ------------------------------------------ Signup Form -->    
     <section class="signupform">
         <form class="form" action="/suscription">
-            <h5>Signup for<br class="br_null"> promos<br class="br_null"> and offers</h5>
+            <h5>Signup for<br class="br-null-desktop"> promos<br class="br-null-desktop"> and offers</h5>
             <!-- <label for="email">Signup for<br>promos<br>and offers</label> -->
             <input type="email" placeholder="Type your email here" id="email"></input>
             <button class="botonPrimario">Subscribe</button>
@@ -120,6 +126,6 @@
 <!-- ------------------------------------------ Scripts and Others -->
     <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script> 
+    </script>
 </body>
 </html>

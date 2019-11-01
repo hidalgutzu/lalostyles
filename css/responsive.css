@@ -26,9 +26,34 @@
     }
 
 /* CLASES --- */
+    .hidden-desktop {
+        display: initial;
+    }
+    .br-null-desktop {
+        display: inherit;
+    }
     /* --- start buttons */
     .botonPrimario {
-        box-shadow: none;
+        padding: 15px;
+    }
+    a.boton-cerrar {
+        position: absolute;
+        background: url("../images/close.svg") no-repeat center center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        cursor: pointer;
+        margin: 7px 7px 0;
+        z-index: 9999;
+        transition: var(--transicion);
+    }
+    a.boton-cerrar:hover {
+        background: url("../images/close-hover.svg") no-repeat center center;
+        background-size: 3em; 
+    }
+    .boton-cerrar img {
+        width: 50px;
     }
     /* --- end buttons */
     .br_null, .hidden {
@@ -39,13 +64,91 @@
     }
 
     /* ::: HEADER ::: */
+    .header-logo-mobile {
+        z-index: 9999;
+        padding: 13px 0;
+        position: fixed;
+        left: 40%;
+        right: 40%;
+        width: 90px;
+    }
+    /* --- Header > Menu Mobile */
+    .pleca-blanca {
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+        position: fixed;
+        display: block;
+        background: var(--blanco);
+        width: 100%;
+        height: 50px;
+        z-index: 980;
+    }
+    .burger-button, .burger-menu {
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .burger-button {
+        z-index: 991;
+        transition: var(--transicion);
+    }
+    .burger-button::after {
+        font-family: "FontAwesome";
+        content: "\f0c9";
+        font-size: 2em;
+        padding: 16px;
+    }
+    .burger-button:hover {
+        color: var(--color_primario);
+    }
+    .burger-menu {
+        background: var(--blanco);
+        z-index: 9999;
+        height: 100vh;
+        left: -100vw;
+        width: 100vw;
+        transition: var(--transicion);
+    }
+    .burger-menu.is-active {
+        left: 0;
+    }
     .header {
         background-size: cover;
     }
-    .header-menuNav {
+    /* --- Header > Nav */
+    .header-menuNav ul {
+        text-align: center;
+        flex-direction: column;
+        margin: 40px 0 0;
+    }
+    .header-menuNav ul li {
+        margin: 20px 0;
+    }
+    .header-menuNav a {
+        display: inline-block;
+        width: 40%;
+    }
+    .fa-facebook-f, .fa-instagram {
         display: none;
     }
-    /* ::: HEADER > HERO */
+
+    ul.header-social li {
+        font-size: 1em;
+    }
+    ul.header-social a {
+        padding: 0;
+    }
+    ul.header-social {
+        padding: 18px 0 15px;
+        margin-right: 0;
+    }
+    ul.header-social a .fa-whatsapp {
+        padding: 14px 10px 14px;
+    }
+    .fa-whatsapp::before {
+        font-size: 1.5em;
+    }
+    /* --- Header > Hero */
     .hero {
         margin-top: 0;
     }
@@ -56,6 +159,13 @@
         margin: 20px auto;
         width: 80%;
     }
+    .hero-autorInfo {
+        font-weight: normal;
+    }
+    .hero-autorContenedor {
+        margin-top: 30px;
+    }
+
     /* ::: SERVICES ::: */
     .services {
         justify-content: center;
