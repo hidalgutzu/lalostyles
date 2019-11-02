@@ -8,7 +8,10 @@
 @media (max-width: 767.98px) { ... }
 
  /* ---------------- Small devices (phones) */
- @media (max-width: 575.98px) { 
+ @media (max-width: 575.98px) {
+    .hideoverflow {
+        overflow: hidden
+    }
  /* ETIQUETAS --- */   
     H1 {
         font-size: 6em;
@@ -103,12 +106,12 @@
         color: var(--color_primario);
     }
     .burger-menu {
-        background: rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.95);
         z-index: 9999;
         height: 100vh;
         left: -100vw;
         width: 100vw;
-        transition: var(--transicion);
+        transition: all 0.4s ease-in-out;
     }
     .burger-menu.is-active {
         left: 0;
@@ -125,6 +128,9 @@
     }
     .header-menuNav ul li {
         margin: 6% 0 0;
+    }
+    .header-menuNav ul li a {
+        background: none;
     }
     .header-menuNav a {
         display: inline-block;
