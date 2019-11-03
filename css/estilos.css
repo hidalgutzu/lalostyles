@@ -366,15 +366,15 @@ ul.header-social a:hover .fa-whatsapp {
 }
 .signupform ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #aaa;
+    color: var(--gris_claro);
 }
 .signupform :-ms-input-placeholder {
    /* Internet Explorer 10-11 */
-    color: #aaa;
+   color: var(--gris_claro);
 }
 .signupform ::-ms-input-placeholder {
    /* Microsoft Edge */
-    color: #aaa;
+   color: var(--gris_claro);
 }
 
 /* ::::::::::: FOOTER ::::::::::: */

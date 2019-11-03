@@ -92,18 +92,18 @@
         left: 0;
     }
     .burger-button {
-        z-index: 991;
+        position: fixed;
+        background: url("../images/lnr-menu.svg") no-repeat center center;
+        transform: scale(1.5);
+        width: 30px;
+        margin-left: 8px;
+        margin-top: 3px;
+        padding: 30px 17px 9px;
         transition: var(--transicion);
-    }
-    .burger-button::after {
-        font-family: 'Font Awesome\ 5 Free';
-        content: "\f0c9";
-        font-size: 2em;
-        font-weight: 900;
-        padding: 16px;
+        z-index: 991;
     }
     .burger-button:hover {
-        color: var(--color_primario);
+        background: url("../images/lnr-menu-hover.svg") no-repeat center center;
     }
     .burger-menu {
         background: rgba(255,255,255,0.95);
@@ -124,7 +124,7 @@
         text-align: center;
         flex-direction: column;
         /* margin: 40px 0 0; */
-        margin: 20% auto;
+        margin: 10% auto;
     }
     .header-menuNav ul li {
         margin: 6% 0 0;
@@ -145,7 +145,24 @@
     .fa-facebook-f, .fa-instagram {
         display: none;
     }
-
+    .social-mobile-container {
+        display: block;
+        width: 100vw;
+        text-align: center;
+    }
+    .social-mobile {
+        margin-top: 50px;
+        width: auto !important;
+    }
+    .social-mobile .fa-facebook-f, .social-mobile .fa-instagram {
+        display: block;
+        color: black;
+        font-size: 2em;
+        padding: 10px 15px;
+    }
+    .social-mobile:hover .fa-facebook-f, .social-mobile:hover .fa-instagram {
+        color: #FFA800;
+    }
     ul.header-social li {
         font-size: 1em;
     }
@@ -174,11 +191,11 @@
         margin: 20px auto;
         width: 80%;
     }
+    .hero-autor {
+        margin-top: 50px;
+    }
     .hero-autorInfo {
         font-weight: normal;
-    }
-    .hero-autorContenedor {
-        margin-top: 30px;
     }
 
     /* ::: SERVICES ::: */
@@ -241,6 +258,18 @@
     .signupform input[type=email], .signupform button {
         width: 80%;
     }
+    .signupform ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+         color: var(--gris);
+     }
+     .signupform :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--gris);
+     }
+     .signupform ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--gris);
+     }
 
     /* ::: FOOTER ::: */
     .footer {
