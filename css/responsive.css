@@ -32,8 +32,8 @@
     .hidden-desktop {
         display: initial;
     }
-    .br-null-desktop {
-        display: inherit;
+    .br-null-mobile{
+        display: none;
     }
     /* --- start buttons */
     .botonPrimario {

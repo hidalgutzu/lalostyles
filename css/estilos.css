@@ -84,9 +84,10 @@ p {
     font-weight: lighter;
 }
 /* SELECTOR DE CLASES ----------------- */
-.br-null-desktop, .hidden-desktop {
+.hidden-desktop {
     display: none;
 }
+
 /* --- start buttons */
 .botonPrimario {
     background-color: var(--color_primario);
