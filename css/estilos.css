@@ -356,6 +356,7 @@ ul.header-social a:hover .fa-whatsapp {
     margin-bottom: 40px;
 }
 .signupform input[type=email] {
+    background: rgba(255,255,255,0.5);
     font-family: 'Montserrat';
     font-size: 0.85em;
     font-style: italic;
