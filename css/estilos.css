@@ -189,6 +189,9 @@ ul.header-social a:hover .fa-whatsapp {
     padding: 9px 14px;
     transition: var(--transicion);
 }
+.header-menuNav ul li a.active {
+    cursor: inherit;
+}
 .header-menuNav ul li a:hover, .header-menuNav ul li a.active {
     color: var(--color_primario);
     border-bottom: 3px solid var(--color_primario);
