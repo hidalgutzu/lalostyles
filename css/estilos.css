@@ -524,7 +524,7 @@ ul.header-social a:hover .fa-whatsapp {
 }
 .slider__nav:checked {
   -webkit-animation: check 0.4s linear forwards;
-          animation: check 0.4s linear forwards;
+        animation: check 15s linear infinite;
 }
 .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
   left: 0%;
