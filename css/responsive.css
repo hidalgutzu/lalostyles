@@ -224,6 +224,18 @@
     }
 
     /* ::: REVIEWS ::: */
+    .slider::after {
+        display: none;
+    }
+    .slider::before {
+        left: 43%;
+        top: 6px;
+        transform: scale(0.8);
+    }
+    .slider__txt {
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
     .reviews {
         width: 75%;
         margin-top: 40px;
