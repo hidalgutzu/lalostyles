@@ -24,37 +24,34 @@ function hide() {
 }
 
 // ---------- AUTOPLAY RADIOBUTTONS ----------
-  var reviews = function() {
-    var i = 1;
-    while (i < 5) {
-      (function(i) {
-        setTimeout(function() {
-            document.querySelector('.slider__nav:nth-of-type'+'('+i+')').checked = true;
-        }, 2000 * i);
-      })
-      (i++)
+// código hecho por mi hermano Eduardo Hidalgo --GRACIAS!--
+(function AutomaticSlides() {
+    let slideIndex = 1;
+    const timer = 2000;
+  
+    // obtiene la cantidad total de slides. si añades un nuevo slide, no hace falta tocar el código.
+    const slides = document.getElementsByClassName("slider__nav");
+  
+    const sliderChecked = i =>
+      document.querySelector(`.slider__nav:nth-of-type(${i})`);
+  
+    function RecursiveSlides() {
+      // si el index es igual al total de slides, resetea el index a 1, de lo contrario incrementa.
+      slideIndex == slides.length ? (slideIndex = 1) : ++slideIndex;
+  
+      // setea el slide anterior como falso. en caso que el index sea 1, setea el último slide como false.
+      if (slideIndex == 1) sliderChecked(slides.length).checked = false;
+      else sliderChecked(slideIndex - 1).checked = false;
+  
+      // setea el siguiente slide como true
+      sliderChecked(slideIndex).checked = true;
+      // función recursiva
+      setTimeout(RecursiveSlides, timer);
     }
-  }
-reviews();
-
-// (() => {
-//     let i = 1;
-//     const timer = 2000;
-
-//     const sliderChecked = (i) => document.querySelector(`.slider__nav:nth-of-type(${i})`);
-
-// while (i <= 5) {
-//     setTimeout(() => {
-//         if (sliderChecked(i))
-//             sliderChecked(i).checked = true;
-//         else
-//             console.error(`El slider ${i} no existe`, sliderChecked(i));
-//     }, timer * i);
-//     ++i;
-//     }
-// });
-
-
+  
+    // ejecuta la función recursiva por primera vez
+    RecursiveSlides();
+  })();
   
 
   
