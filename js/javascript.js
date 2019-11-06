@@ -24,34 +24,35 @@ function hide() {
 }
 
 // ---------- AUTOPLAY RADIOBUTTONS ----------
-//   var reviews = function() {
-//     var i = 1;
-//     while (i < 5) {
-//       (function(i) {
-//         setTimeout(function() {
-//             document.querySelector('.slider__nav:nth-of-type'+'('+i+')').checked = true;
-//         }, 2000 * i);
-//       })(i++)
-//     }
-//   }
-// reviews();
-
-(() => {
-    let i = 1;
-    const timer = 2000;
-
-    const sliderChecked = (i) => document.querySelector(`.slider__nav:nth-of-type(${i})`);
-
-while (i <= 5) {
-    setTimeout(() => {
-        if (sliderChecked(i))
-            sliderChecked(i).checked = true;
-        else
-            console.error(`El slider ${i} no existe`, sliderChecked(i));
-    }, timer * i);
-    ++i;
+  var reviews = function() {
+    var i = 1;
+    while (i < 5) {
+      (function(i) {
+        setTimeout(function() {
+            document.querySelector('.slider__nav:nth-of-type'+'('+i+')').checked = true;
+        }, 2000 * i);
+      })
+      (i++)
     }
-});
+  }
+reviews();
+
+// (() => {
+//     let i = 1;
+//     const timer = 2000;
+
+//     const sliderChecked = (i) => document.querySelector(`.slider__nav:nth-of-type(${i})`);
+
+// while (i <= 5) {
+//     setTimeout(() => {
+//         if (sliderChecked(i))
+//             sliderChecked(i).checked = true;
+//         else
+//             console.error(`El slider ${i} no existe`, sliderChecked(i));
+//     }, timer * i);
+//     ++i;
+//     }
+// });
 
 
   
