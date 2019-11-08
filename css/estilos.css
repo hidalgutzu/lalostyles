@@ -121,7 +121,7 @@ p {
     animation: sliderHome 20s linear infinite 0s; /* css/animation.css --> sliderHome */
     /* animation-timing-function: ease-in-out; */
     background-image: url("../images/home/01-chichen.png");
-    background-position-y: -50px;
+    background-position-y: -60px;
     background-attachment: fixed;
 }
 .headerContainer {

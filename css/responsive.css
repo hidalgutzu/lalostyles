@@ -119,6 +119,7 @@
     }
     .header {
         background-size: cover;
+        background-position-y: 0;
     }
     /* --- Header > Nav */
     .header-menuNav, .header-menuNav ul {
