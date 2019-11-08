@@ -121,6 +121,9 @@
         background-size: cover;
     }
     /* --- Header > Nav */
+    .header-menuNav, .header-menuNav ul {
+        display: inherit;
+    }
     .header-menuNav ul {
         text-align: center;
         flex-direction: column;
@@ -128,6 +131,7 @@
         margin: 10% auto;
     }
     .header-menuNav ul li {
+        width: 100%;
         margin: 6% 0 0;
     }
     .header-menuNav ul li a {
