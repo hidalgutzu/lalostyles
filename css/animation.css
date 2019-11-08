@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .fadeIn {
     animation-duration: 2s;
     -webkit-animation-duration: 2s;
@@ -240,3 +241,26 @@
         top: 0;
    }
 }
+
+/* SLIDE_BG - Header Slider Home */
+    /* los estilos del .header están en css/estilos.css  */
+    @keyframes sliderHome {
+        0% {
+            background-image: url("../images/home/01-chichen.png");
+        }
+        30% {
+            background-image: url('../images/home/02-xplor.png');
+        }
+        50% {
+            background-image: url('../images/home/03-snorkel.png');
+        }
+        70% {
+            background-image: url('../images/home/04-rappel.png');
+        }
+        85% {
+            background-image: url('../images/home/05-tirolesa.png');
+        }
+        100% {
+            background-image: url('../images/home/01-chichen.png');
+        }
+    }

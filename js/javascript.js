@@ -52,6 +52,3 @@ function hide() {
     // ejecuta la función recursiva por primera vez
     RecursiveSlides();
   })();
-  
-
-  

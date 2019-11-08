@@ -225,12 +225,15 @@
     }
 
     /* ::: REVIEWS ::: */
+    .slider {
+        height: 40%;
+    }
     .slider::after {
         display: none;
     }
     .slider::before {
         left: 43%;
-        top: 6px;
+        top: 10px;
         transform: scale(0.8);
     }
     .slider__txt {
