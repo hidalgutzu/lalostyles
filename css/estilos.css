@@ -117,13 +117,25 @@ p {
     background-position: top center;
     background-size: 1000px;
     background-repeat: no-repeat;
-    backface-visibility: visible;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     animation: sliderHome 20s linear infinite 0s; /* css/animation.css --> sliderHome */
     /* animation-timing-function: ease-in-out; */
     background-image: url("../images/home/01-chichen.png");
-    background-position-y: -60px;
+    background-position-y: -50px;
     background-attachment: fixed;
 }
+div.preload-images {
+    background: url("../images/home/01-chichen.png") no-repeat -9999px -9999px;
+    background: url("../images/home/01-chichen.png") no-repeat -9999px -9999px,
+      url("../images/home/02-xplor.png") no-repeat -9999px -9999px,
+      url("../images/home/03-snorkel.png") no-repeat -9999px -9999px,
+      url("../images/home/04-rappel.png") no-repeat -9999px -9999px,
+      url("../images/home/05-tirolesa.png") no-repeat -9999px -9999px,
+      url("../images/home/01-chichen.png") no-repeat -9999px -9999px;
+  }
 .headerContainer {
     display: flex;
     justify-content: space-between;
