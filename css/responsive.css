@@ -118,12 +118,11 @@
         left: 0;
     }
     .header {
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position-y: 50px;
-        min-height: 100vh;
+        background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-position-y: 150px;
     }
     div.preload-images {
         background-size: contain;
