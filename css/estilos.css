@@ -119,10 +119,7 @@ p {
     background-repeat: no-repeat;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
     animation: sliderHome 20s linear infinite 0s; /* css/animation.css --> sliderHome */
-    /* animation-timing-function: ease-in-out; */
     background-image: url("../images/home/01-chichen.png");
     background-position-y: -50px;
     background-attachment: fixed;
@@ -150,7 +147,7 @@ div.preload-images {
 }
 .header-socialAndQuote {
     right: 0;
-    position: fixed;
+    position: fixed !important;
     z-index: 999;
 }
 .header-socialAndQuote ul {
@@ -214,6 +211,7 @@ ul.header-social a:hover .fa-whatsapp {
 .header-menuNav ul li a:hover, .header-menuNav ul li a.active {
     color: var(--color_primario);
     border-bottom: 9px solid var(--color_primario);
+    background-color: rgba(255,255,255,0.8);
 }
 
 /* ::::::::::: HERO ::::::::::: */
