@@ -43,28 +43,29 @@ a {
     text-decoration: none;
 }
 h1, h2, h5 {text-align: center;}
-H1 {
+h1 {
     font-family: "youth_touch_demoregular";
     font-size: 110px;
     line-height: 110px;
     font-weight: normal;
 }
-H2 {
+h2 {
     background-color: var(--negro);
     color: var(--color_primario);
+    display: inline;
     letter-spacing: 0.04em;
     font-style: italic;
     font-weight: bold;
     font-size: 25px;
-    padding: 10px;
+    padding: 5px 15px;
 }
-H3 {
+h3 {
     font-family: "youth_touch_demoregular";
     color: var(--blanco);
     font-size: 80px;
     font-weight: normal;
 }
-H4 {
+h4 {
     font-size: 1.5em;
     font-weight: 600;
     font-style: italic;
@@ -213,7 +214,6 @@ ul.header-social a:hover .fa-whatsapp {
     border-bottom: 9px solid var(--color_primario);
     background-color: rgba(255,255,255,0.8);
 }
-
 /* ::::::::::: HERO ::::::::::: */
 .heroContenedor {
     display: flex;
@@ -228,11 +228,8 @@ ul.header-social a:hover .fa-whatsapp {
     align-self: center;
     margin-top: 10%;
 }
-.hero-description, .hero-title {
+.hero-description, .hero-title, h1 {
     margin: 0;
-}
-.hero-description {
-    padding: 5px 15px;
 }
 .hero-autor {
     display: flex;
@@ -465,7 +462,58 @@ ul.header-social a:hover .fa-whatsapp {
     width: 35%;
 }
 
-/* ::::::::::: ADITIONALS ::::::::::: */
+/* ::::::::::: PI: PÁGINAS INTERNAS ::::::::::: */
+.header-internas {
+    height: 285px;
+    width: 100%;
+    background-position: top center;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position-y: 35px;
+    background-attachment: fixed;
+}
+.header-internas.tours {
+    background-image: url("../images/header-tours.png");
+}
+.header-internas.transfers {
+    background-image: url("../images/header-transfers.png");
+}
+.header-internas.groups {
+    background-image: url("../images/header-groups.png");
+}
+.header-internas.ourreviews {
+    background-image: url("../images/header-reviews.png");
+}
+.header-internas.contact {
+    background-image: url("../images/header-contact-us.png");
+}
+.header-internas-titulo {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.header-internas-titulo h1 {
+    line-height: 0.6em;
+}
+.header-internas-titulo h2 {
+    font-size: 1.1em;
+}
+.mancha-blanca {
+    position: absolute;
+    background: url("../images/pleca-blanca.png") no-repeat bottom center;
+    height: 30px;
+    width: 789px;
+    margin-top: 255px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+} 
+/* ::: PI: HEADER ::: */
+
+
+
+/* ::::::::::: ADITIONALS / ADICIONALES ::::::::::: */
 .avion {
     background: url('../images/avion.svg') no-repeat bottom center;
 }
