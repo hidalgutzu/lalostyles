@@ -1,4 +1,4 @@
-// ---------- MENÚ HAMBURGUESA ----------
+// ---------- MENÚ HAMBURGUESA Y FONDO ESTÁTICO ----------
    // llamamos a body para poder modificarlo
 const body = document.querySelector('.body');
    // llamamos al menú
@@ -22,6 +22,14 @@ function hide() {
     menu.classList.remove('is-active');
     body.classList.remove('hideoverflow');
 }
+
+// ---------- LOAD IMAGE ----------
+// var imagen = document.getElementById('id1');
+// var newImg = new Image;
+// newImg.onload = function() {
+//     imagen.src = this.src;
+// }
+// newImg.src = 'http://lalostyles.com/images/lalostyles.png';
 
 // ---------- AUTOPLAY RADIOBUTTONS ----------
 // código hecho por mi hermano Eduardo Hidalgo --GRACIAS!--

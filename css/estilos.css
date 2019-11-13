@@ -52,7 +52,7 @@ h1 {
 h2 {
     background-color: var(--negro);
     color: var(--color_primario);
-    display: inline;
+    display: inline-block;
     letter-spacing: 0.04em;
     font-style: italic;
     font-weight: bold;
@@ -469,7 +469,7 @@ ul.header-social a:hover .fa-whatsapp {
     background-position: top center;
     background-size: 1000px;
     background-repeat: no-repeat;
-    background-position-y: 35px;
+    background-position-y: 25px;
     background-attachment: fixed;
 }
 .header-internas.tours {
@@ -490,6 +490,7 @@ ul.header-social a:hover .fa-whatsapp {
 .header-internas-titulo {
     text-align: center;
     width: 100%;
+    display: inline-block;
     margin-top: 30px;
 }
 .header-internas-titulo h1 {
@@ -500,9 +501,10 @@ ul.header-social a:hover .fa-whatsapp {
 }
 .mancha-blanca {
     position: absolute;
-    background: url("../images/pleca-blanca.png") no-repeat bottom center;
-    height: 30px;
-    width: 789px;
+    background: url("../images/pleca-blanca@2x.png") no-repeat bottom center;
+    background-size: 800px;
+    height:35px;
+    width: 900px;
     margin-top: 255px;
     left: 0;
     right: 0;
