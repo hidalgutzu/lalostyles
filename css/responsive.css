@@ -336,9 +336,17 @@
         padding: 20px 0;
         border-top: 1px solid rgba(255,255,255,0.25);
     }
-    /* ::: FOOTER ::: */
     .avion {
         margin-bottom: -120px;
+    }
+    /* ::: PI: PÁGINAS INTERNAS ::: */
+    .header-internas {
+        background-position-y: 35px;
+        position: relative;
+        background-size: 800px;
+    }
+    .header-internas-titulo {
+        margin-top: 110px;
     }
     
  }
