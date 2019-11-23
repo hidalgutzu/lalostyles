@@ -38,6 +38,9 @@
     .br-null-mobile{
         display: none;
     }
+    .br-null-desktop {
+        display: inherit;
+    }
     
     /* --- start buttons */
     .botonPrimario {
@@ -341,12 +344,13 @@
     }
     /* ::: PI: PÁGINAS INTERNAS ::: */
     .header-internas {
-        background-position-y: 35px;
-        position: relative;
+        background-position-y: 55px;
         background-size: 800px;
     }
     .header-internas-titulo {
         margin-top: 110px;
     }
-    
+    .header-internas-titulo h2 {
+        margin: 0 20px;
+    }
  }

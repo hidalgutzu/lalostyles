@@ -42,6 +42,9 @@ ul {
 a {
     text-decoration: none;
 }
+.br-null-desktop {
+    display: none;
+}
 h1, h2, h5 {text-align: center;}
 h1 {
     font-family: "youth_touch_demoregular";
@@ -157,7 +160,7 @@ div.preload-images {
 ul.header-social {
     top: 0;
     background: rgba(255,255,255,0.85);
-    padding: 15px 0 13px;
+    padding: 18px 0 16px;
 }
 ul.header-social a {
     font-size: 1.3em;
@@ -489,7 +492,7 @@ ul.header-social a:hover .fa-whatsapp {
 }
 .header-internas-titulo {
     text-align: center;
-    width: 100%;
+    width: 98vw;
     display: inline-block;
     margin-top: 30px;
 }
@@ -504,16 +507,13 @@ ul.header-social a:hover .fa-whatsapp {
     background: url("../images/pleca-blanca@2x.png") no-repeat bottom center;
     background-size: 800px;
     height:35px;
-    width: 900px;
+    width: 98vw;
     margin-top: 255px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
 } 
-/* ::: PI: HEADER ::: */
-
-
 
 /* ::::::::::: ADITIONALS / ADICIONALES ::::::::::: */
 .avion {
@@ -653,7 +653,6 @@ ul.header-social a:hover .fa-whatsapp {
     width: 85%; /*Determina el ancho de los textos*/
     color: var(--negro);
 }
-
 input[type='radio']:after {
     width: 15px;
     height: 15px;
@@ -664,8 +663,122 @@ input[type='radio']:after {
     display: inline-block;
     border: 2px solid white;
 }
-
 input[type='radio']:checked:after {
     background-color: var(--negro);
     transition: all 0.3s ease-in-out;
+}
+
+/* ::::::::::: BOXES ::::::::::: */
+.boxes {
+    display: grid;
+    grid-template: repeat(2, 413px) / repeat(3, minmax(200px, 1fr));
+    grid-gap:20px;
+    align-items: start;
+    justify-items: center;
+    width: 100vw;
+    max-width: 990px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.box-item {
+    background-color: var(--blanco);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+    color: var(--negro);
+    font-family: Montserrat-Regular;
+    font-size: 13px;
+    letter-spacing: 0.16px;
+    height: 413px;
+    width: 100%;
+}
+.box-img .image.img01 {
+    height: 280px;
+}
+.box-img .img01 {
+    background: url("../images/tours/foto.jpg") no-repeat center center;
+    background-size: cover;
+}
+.box-img .image {
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+}
+.box-img img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    position: relative;
+}
+.box-img .precio {
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--blanco);
+    float: right;
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 10px;
+    top: -60px;
+    right: 0;
+    position: relative;
+}
+.box-img .precio.mancha {
+    background-image: url("../images/services/mancha.svg");
+    background-repeat: no-repeat;
+    background-position-y: -18px;
+    width: 240px;
+}
+.box-img .precio small {
+    font-size: 0.6em;
+}
+.box-text {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: -110px;
+}
+.box-item .box-text h3 {
+    font-family: Montserrat-Regular;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--negro);
+    margin: 0;
+    display: block;
+}
+.box-item .box-text .lugar {
+    color: #7c7c7c;
+}
+.box-buttons, .box-text {
+    padding: 0 15px;
+}
+.box-buttons {
+    float: right;
+}
+.box-item .box-buttons button {
+    color: var(--blanco);
+    text-transform: uppercase;
+    background-color: var(--negro);
+    padding: 15px;
+    float: right;
+    border: 0;
+    transition: var(--transicion);
+}
+.box-item .box-buttons button:hover {
+    color: var(--negro);
+    background-color: var(--color_primario);
+}
+.box-item .box-buttons .vermas {
+    display: inline;
+    font-size: 1em;
+    padding: 13px;
+}
+.box-item .box-buttons a {
+    color: var(--negro);
+    vertical-align: middle;
+    line-height: 43px;
+    text-decoration: underline;
+    transition: var(--transicion);
+}
+.box-item .box-buttons a:hover {
+    color: var(--color_primario);
 }
