@@ -667,6 +667,18 @@ input[type='radio']:checked:after {
     background-color: var(--negro);
     transition: all 0.3s ease-in-out;
 }
+/* ::::::::::: PARRAFOS ::::::::::: */
+.parrafo {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 50px auto;
+}
+.alerta {
+    border: 1px solid var(--color_primario);
+    font-size: 0.85em;
+    font-style: italic;
+    padding: 8px;
+}
 
 /* ::::::::::: BOXES ::::::::::: */
 .boxes {
@@ -714,13 +726,12 @@ input[type='radio']:checked:after {
     font-size: 1.6em;
     font-weight: 700;
     color: var(--blanco);
-    float: right;
     text-align: right;
-    padding-right: 35px;
+    padding-right: 37px;
     padding-top: 10px;
-    top: -60px;
-    right: 0;
-    position: relative;
+    height: 55px;
+    margin: -55px 75px 0;
+    position: absolute;
 }
 .box-img .precio.mancha {
     background-image: url("../images/services/mancha.svg");
@@ -734,8 +745,7 @@ input[type='radio']:checked:after {
 .box-text {
     display: inline-block;
     width: 100%;
-    margin-bottom: 15px;
-    margin-top: -110px;
+    margin: 15px 0 15px;
 }
 .box-item .box-text h3 {
     font-family: Montserrat-Regular;
@@ -781,4 +791,8 @@ input[type='radio']:checked:after {
 }
 .box-item .box-buttons a:hover {
     color: var(--color_primario);
+}
+.transfers .img01 {
+    background: url("../images/transfers/transfer-img@2x.png") no-repeat top center;
+    background-size: cover;
 }
