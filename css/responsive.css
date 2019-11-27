@@ -362,8 +362,8 @@
     /* ::: BOXES Groups & Transfers ::: */
     .boxes {
         grid-template: repeat(2, auto) / repeat(2, minmax(100px, 1fr));
-        grid-gap: 15px 10px;
-        margin: 0 10px;
+        grid-gap: 25px 10px;
+        margin: 0 20px;
     }
     .box-img .precio {
         right: -30px;
