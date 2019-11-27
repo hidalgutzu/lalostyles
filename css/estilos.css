@@ -855,10 +855,6 @@ input[type='radio']:checked:after {
 .box-item .box-buttons a:hover {
     color: var(--color_primario);
 }
-.transfers .img01 {
-    background: url("../images/transfers/transfer-img@2x.png") no-repeat top center;
-    background-size: cover;
-}
 /* ::::::::::: INCLUSIONS ::::::::::: */
 .inclusions {
     width: 100%;
