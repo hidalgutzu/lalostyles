@@ -241,7 +241,6 @@
         border-bottom: 0;
         transform: none;
     }
-
     /* ::: REVIEWS ::: */
     .slider {
         height: 40%;
@@ -275,7 +274,6 @@
         top: -55px;
         transform: scale(0.7);
     }
-
     /* ::: SIGNUP FORM ::: */
     .signupform .form {
         flex-direction: column;
@@ -304,7 +302,6 @@
         /* Microsoft Edge */
         color: var(--gris);
      }
-
     /* ::: FOOTER ::: */
     .footer {
         height: 100%;
@@ -343,14 +340,51 @@
         margin-bottom: -120px;
     }
     /* ::: PI: PÁGINAS INTERNAS ::: */
+    .mancha-blanca {
+        width: 97vw;
+    }
     .header-internas {
         background-position-y: 55px;
         background-size: 800px;
     }
     .header-internas-titulo {
         margin-top: 110px;
+        width: 96vw;
     }
     .header-internas-titulo h2 {
         margin: 0 20px;
+    }
+    /* ::::::::::: PARRAFOS ::::::::::: */
+.parrafo, .inclusions {
+    width: 90%;
+    font-size: 0.9em;
+}
+    /* ::: BOXES Groups & Transfers ::: */
+    .boxes {
+        grid-template: repeat(2, auto) / repeat(2, minmax(100px, 1fr));
+        grid-gap: 15px 10px;
+        margin: 0 10px;
+    }
+    .box-img .precio {
+        right: -30px;
+    }
+    .box-img .mancha {
+        transform: scale(0.75);
+    }
+    /* ::: REVIEWS list ::: */
+    .reviews-list {
+        width: 80%;
+    }
+    .reviews-list-box .parrafo {
+        width: inherit;
+    }
+    .reviews-list-autor {
+        font-size: 0.85em;
+    }
+    .reviews-list-fecha {
+        display: block;
+    }
+    .reviews-list-fecha::after {
+        content: none;
     }
  }

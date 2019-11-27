@@ -69,9 +69,9 @@ h3 {
     font-weight: normal;
 }
 h4 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
-    font-style: italic;
+    /* font-style: italic; */
     margin-block-start: 0;
     margin-block-end: 0.5em;
     margin 1em;
@@ -91,12 +91,22 @@ p {
 .hidden-desktop {
     display: none;
 }
-
+.center {
+    display: block;
+    margin: 0 auto;
+}
+.f-left {
+    text-align: left;
+}
+.f-right {
+    text-align: right;
+}
 /* --- start buttons */
 .botonPrimario {
     background-color: var(--color_primario);
     border: 0;
     color: var(--blanco);
+    cursor: pointer;
     font-size: 0.95em;
     font-weight: 500;
     height: 53px;
@@ -351,8 +361,6 @@ ul.header-social a:hover .fa-whatsapp {
     content:url('../images/reviews/comillas.svg');
     position: absolute;
     top: 25px;
-    /* width: 68px;
-    height: 52px; */
 }
 .reviews::after {
     transform: rotate(180deg);
@@ -514,6 +522,64 @@ ul.header-social a:hover .fa-whatsapp {
     margin-left: auto;
     margin-right: auto;
 } 
+.img-grupos {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 780px;
+}
+/* Reviews section */
+.reviews-list {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.reviews-list-box {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 35px;
+    width: 100%;
+    max-width: 650px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+.reviews-list-imagen {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: -115px;
+    top: -15px;
+    box-shadow: -6px 8px 10px 0 rgba(0,0,0,0.25);
+}
+.reviews-list-fecha {
+    color: var(--gris_claro);
+    font-size: .75em;
+}
+.reviews-list-fecha::after {
+    content: " |";
+    margin: 0 6px;
+}
+.reviews-list-autor {
+    color: var(--color_primario);
+    font-weight: 600;
+    font-style: italic;
+}
+.reviews-list-border-left {
+    border-left: 90px solid var(--color_primario);
+}
+.reviews-list-border-right {
+    border-right: 90px solid var(--color_primario);
+    border-left: 1px solid lightgray;
+}
+.reviews-list-margin-left {
+    margin-left: auto;
+}
+.reviews-list-right-img {
+    right: -115px;
+    left: inherit;
+}
 
 /* ::::::::::: ADITIONALS / ADICIONALES ::::::::::: */
 .avion {
@@ -565,8 +631,6 @@ ul.header-social a:hover .fa-whatsapp {
     content:url('../images/reviews/comillas.svg');
     position: absolute;
     top: 100px;
-    /* width: 68px;
-    height: 52px; */
 }
 .slider::after {
     transform: rotate(180deg);
@@ -671,7 +735,7 @@ input[type='radio']:checked:after {
 .parrafo {
     width: 100%;
     max-width: 800px;
-    margin: 20px auto 50px auto;
+    margin: 20px auto;
 }
 .alerta {
     border: 1px solid var(--color_primario);
@@ -680,16 +744,13 @@ input[type='radio']:checked:after {
     padding: 8px;
 }
 
-/* ::::::::::: BOXES ::::::::::: */
+/* ::::::::::: BOXES (listado de productos Tours y Transfers) ::::::::::: */
 .boxes {
     display: grid;
-    grid-template: repeat(2, 413px) / repeat(3, minmax(200px, 1fr));
+    grid-template: repeat(2, auto) / repeat(3, minmax(250px, 300px));
     grid-gap:20px;
     align-items: start;
-    justify-items: center;
-    width: 100vw;
-    max-width: 990px;
-    margin: 0 auto;
+    justify-content: center;
     margin-top: 25px;
 }
 .box-item {
@@ -699,7 +760,13 @@ input[type='radio']:checked:after {
     font-family: Montserrat-Regular;
     font-size: 13px;
     letter-spacing: 0.16px;
-    height: 413px;
+    height: inherit;
+}
+.box-img {
+    margin: 0;
+    position: relative;
+}
+.box-img img {
     width: 100%;
 }
 .box-img .image.img01 {
@@ -715,28 +782,23 @@ input[type='radio']:checked:after {
     display: block;
     position: relative;
 }
-.box-img img {
-    width: 100%;
-    height: 200px;
-    display: block;
-    position: relative;
-}
 .box-img .precio {
     font-family:'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.6em;
     font-weight: 700;
     color: var(--blanco);
+    right: 0;
+    bottom: 0;
     text-align: right;
-    padding-right: 37px;
-    padding-top: 10px;
-    height: 55px;
-    margin: -55px 75px 0;
+    padding-right: 30px;
+    padding-top: 17px;
     position: absolute;
 }
 .box-img .precio.mancha {
     background-image: url("../images/services/mancha.svg");
     background-repeat: no-repeat;
-    background-position-y: -18px;
+    background-position-y: -10px;
+    height: 70px;
     width: 240px;
 }
 .box-img .precio small {
@@ -745,7 +807,7 @@ input[type='radio']:checked:after {
 .box-text {
     display: inline-block;
     width: 100%;
-    margin: 15px 0 15px;
+    margin: 15px 0 15px 12px;
 }
 .box-item .box-text h3 {
     font-family: Montserrat-Regular;
@@ -759,10 +821,11 @@ input[type='radio']:checked:after {
     color: #7c7c7c;
 }
 .box-buttons, .box-text {
-    padding: 0 15px;
+    padding: 0 15px 15px 0;
 }
 .box-buttons {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 .box-item .box-buttons button {
     color: var(--blanco);
@@ -795,4 +858,27 @@ input[type='radio']:checked:after {
 .transfers .img01 {
     background: url("../images/transfers/transfer-img@2x.png") no-repeat top center;
     background-size: cover;
+}
+/* ::::::::::: INCLUSIONS ::::::::::: */
+.inclusions {
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto 0 auto;
+}
+.inclusions ul {
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 2em;
+}
+.inclusions li {
+    position: relative;
+    padding-left: 30px;
+}
+.inclusions ul li::before {
+    position: absolute;
+    content: url(../images/lnr-checkmark-circle.svg);
+    width: 30px;
+    height: 80px;
+    margin-left: -30px;
+    margin-top: 2px;
 }
