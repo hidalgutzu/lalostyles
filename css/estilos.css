@@ -378,20 +378,39 @@ ul.header-social a:hover .fa-whatsapp {
 }
 
 /* ::::::::::: SIGNUP FORM ::::::::::: */
+.signupform {
+    margin-bottom: 25px;
+    width: 100%;
+}
 .signupform .form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
-.signupform input[type=email] {
+/* #mc_embed_signup input[type=email] {
+    border: 0;
+    padding: 20px 20px;
+    margin: 0 15px;
+    width: 700px;
+    line-height: 53px;
+} */
+
+#mc_embed_signup_scroll {
+    display: flex;
+    /* width: 90%; */
+}
+#mc_embed_signup {
+    /* width: 100%; */
+}
+/* .signupform input[type=email], */
+#mc_embed_signup #mc_embed_signup_scroll input[type=email] {
     background: rgba(255,255,255,0.5);
     font-family: 'Montserrat';
     font-size: 0.85em;
     font-style: italic;
-    width: 30%;
+    height: inherit;
     padding: 0 20px;
-    line-height: 53px;
     margin: 0 8px 0 12px;
     border: 1px solid var(--negro);
     -webkit-appearance: none;
@@ -400,6 +419,7 @@ ul.header-social a:hover .fa-whatsapp {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     outline: none;
+    box-sizing: border-box;
 }
 .signupform ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -810,7 +830,7 @@ input[type='radio']:checked:after {
     margin: 15px 0 15px 12px;
 }
 .box-item .box-text h3 {
-    font-family: Montserrat-Regular;
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.3em;
     font-weight: bold;
     color: var(--negro);
