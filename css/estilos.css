@@ -386,33 +386,16 @@ ul.header-social a:hover .fa-whatsapp {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 40px; */
 }
-/* #mc_embed_signup input[type=email] {
-    border: 0;
-    padding: 20px 20px;
-    margin: 0 15px;
-    width: 700px;
-    line-height: 53px;
-} */
-
-#mc_embed_signup_scroll {
-    display: flex;
-    /* width: 90%; */
-}
-#mc_embed_signup {
-    /* width: 100%; */
-}
-/* .signupform input[type=email], */
-#mc_embed_signup #mc_embed_signup_scroll input[type=email] {
+.signupform .form input[type=email] {
     background: rgba(255,255,255,0.5);
     font-family: 'Montserrat';
     font-size: 0.85em;
     font-style: italic;
-    height: inherit;
+    line-height: 51px;
     padding: 0 20px;
     margin: 0 8px 0 12px;
-    border: 1px solid var(--negro);
+    border: 1px solid var(--negro) !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -420,6 +403,8 @@ ul.header-social a:hover .fa-whatsapp {
     backface-visibility: hidden;
     outline: none;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 333px;
 }
 .signupform ::placeholder {
    /* Chrome, Firefox, Opera, Safari 10.1+ */

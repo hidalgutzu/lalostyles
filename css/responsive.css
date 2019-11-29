@@ -278,20 +278,22 @@
         transform: scale(0.7);
     }
     /* ::: SIGNUP FORM ::: */
+    .signupform {
+        margin-bottom: 35px;
+        width: 100%;
+    }
     .signupform .form {
         flex-direction: column;
     }
     .signupform h5 {
         margin: 20px 0 15px 0;
     }
-    .signupform ::placeholder {
+    .signupform .form input[type=email] {
+        margin: 0;
         text-align: center;
     }
-    .signupform input[type=email] {
-        margin: 0 0 7px 0;
-    }
-    .signupform input[type=email], .signupform button {
-        width: 100%;
+    .signupform ::placeholder {
+        text-align: center;
     }
     .signupform ::placeholder {
         /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -305,9 +307,12 @@
         /* Microsoft Edge */
         color: var(--gris);
      }
-     /* #mc_embed_signup {
-        width: 100%;
-    } */
+     .signupform .boton {
+         margin-top: 5px;
+         width: 100%;
+         max-width: 333px;
+     }
+
     /* ::: FOOTER ::: */
     .footer {
         height: 100%;
