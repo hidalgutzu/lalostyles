@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex" />
+    <title>Lalostyles | Transfer Quote</title>
+    <meta name="description" content="Quote for transfer Services in Cancun & Riviera Maya" />
+    <meta name="keywords" content="info, contact, contact us, lalostyles, cancun, riviera maya, transfers, tours, groups, reservations, vacations" />
+    <meta name="author" content="Daniel Hidalgo | hidalgutzu@gmail.com" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+</head>
+<body class="avion body">
+<!-- ------------------------------------------ Header -->
+    <header>
+        <div class="pleca-blanca hidden-desktop"></div>
+        <div class="headerContainer">
+            <img class="header-logo-mobile fadeInDown hidden-desktop" src="images/lalostyles-logo.svg" alt="Lalostyles Travel Services">
+            <img class="header-logo fadeInDown hidden" src="images/lalostyles-travel-services-logo.svg" alt="Lalostyles Travel Services">
+            <div class="header-socialAndQuote">
+                <ul class="header-social">
+                    <li><a href="https://www.facebook.com/Lalostyleservicemx-590354371471406/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/lalostyleservicemx/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://wa.me/5219981499718?text=Hi!%20soy%20Lalo!,%20ready%20to%20assist%20you"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+                <button class="botonPrimario hidden">Get a Quote</button>
+                <a class="botonPrimario pen-square hidden-desktop" href="#"><i class="fas fa-user-edit"></i></a>
+            </div>
+        </div>
+<!-- --------------- Nav -->
+        <span class="burger-button"></span>
+        <div class="burger-menu">
+            <a href="#" class="hidden-desktop boton-cerrar" id="close-menu"></a>
+            <nav class="header-menuNav fadeInDown">
+                <div class="social-mobile-container hidden-desktop">
+                    <a class="social-mobile" href="https://www.facebook.com/Lalostyleservicemx-590354371471406/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-mobile" href="https://www.instagram.com/lalostyleservicemx/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="transfers.html">Transfers</a></li>
+                    <li><a href="groups.html">Groups</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>   
+        </div>
+    </header>
+<!-- ------------------------------------------ Content -->
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><h1 class="fadeInDelay1">Transfer Request</h1></li>
+        </ul>
+    </div>
+    <div class="transfer-quote-container">
+      <div class="transfer-cuote">
+          <div class="item formulario-container">
+              <!-------- Formulario Transfer Quote -->
+              <form method="POST" action="?" class="formulario contact-us w100">
+                  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+              async defer>
+                  </script>
+                <div class="columna-1">
+                    <div>
+                        <label>Lead Name:
+                              <input type="text" id="leadname" placeholder="Full lead name" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>Hotel:
+                              <input type="text" id="hotel" placeholder="Your Hotel" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>Arrival:
+                              <input type="date" id="arrival" placeholder="">
+                        </label> 
+                    </div>
+                    <div>
+                        <label>Arrival airline number:
+                              <input type="number" id="arrivalnum" placeholder="">
+                        </label> 
+                    </div>
+                </div>
+                <div class="columna-2">
+                    <div>
+                        <label>E-mail:
+                              <input type="email" id="email" placeholder="" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>Cellphone:
+                              <input type="number" id="cellphone" placeholder="">
+                        </label> 
+                    </div>
+                    <div>
+                        <label>Departure:
+                              <input type="date" id="departure" placeholder="">
+                        </label> 
+                    </div>
+                    <div>
+                        <label>Departure airline number:
+                              <input type="number" id="departurenum" placeholder="">
+                        </label> 
+                    </div>
+                </div>
+                  <div class="mensaje">
+                      <label>Message:
+                          <textarea id="msg"></textarea>
+                      </label>
+                      
+                  </div>
+                  <div class="terminos">
+                      <label class="container"><small>Acepto términos y condiciones</small>
+                          <input type="checkbox" checked="checked" required>
+                          <span class="checkmark"></span>
+                      </label>
+                  </div> 
+              </form>
+          </div>
+          <!----- Seleccionar tipo de viaje -->
+          <div class="item type-transfer">
+            <img class="center" src="images/transfers/roundtrip_img.svg" alt="Lalostyles Transfer">
+            <input type="radio" class="roundtrip" id="roundtrip"><span>Round Trip</span>
+            <input type="radio" class="oneway" id="oneway"><span>One Way</span>
+          </div>
+          <!----- Vehículo seleccionado -->
+          <div class="item type-vehicle">
+            <a href=""><small>Change Vehicle</small></a>
+            <div class="vehicle">
+                <img src="images/transfers/transfer-img@2x.png" alt="vehicle trasnfer">
+                <p>Large Regular - VAN</p>
+                <small>Large Regular (5-10pax)</small>
+            </div>
+            <!----- Botón de confirmación -->
+            <button>Request a Quote</button>
+          </div>
+          <div class="item notes">
+            <span class="alerta">**Please note: If you are traveling with another party and arriving at different terminals, we suggest you book separate transfers for your comfort and convenience. If one party is severely delayed or if one party chooses not to wait for the other party, the last minute transfer cost will be double, and will be based on van availability.</span>
+          </div>
+      </div>
+    </div>
+    <br>
+<!-- ------------------------------------------ Footer -->
+    <footer class="footer">
+        <div class="footer-logos">
+            <div class="logo-lalostylesContenedor">
+                <span class="mr hidden">®</span> <img src="images/lalostyles-logo-w.svg" alt="Lalo Styles ®" class="logo-lalostyles hidden">
+                <span class="slogan hidden">Our style... your style!</span>
+            </div>
+            <img src="images/paypal.png" alt="Paypal ®" class="paypal">
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
+                <li><a href="privacy-policies.html">Políticas de Privacidad</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-clima">
+                <a class="weatherwidget-io" href="https://forecast7.com/en/21d16n86d85/cancun/" data-label_1="CANCUN" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-theme="dark" data-suncolor="#ffa800" data-cloudfill="#000000" >CANCUN WEATHER</a>
+        </div>
+    </footer>
+<!-- ------------------------------------------ Scripts and Others -->
+    <script src="js/javascript.js"></script>
+    <!-- Slider -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <!-- <script src="js/sendcontactus.js"></script> -->
+    <!-- Weather -->
+    <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+</body>
+</html>

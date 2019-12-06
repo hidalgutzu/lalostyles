@@ -103,9 +103,15 @@ p {
 }
 /* --- start buttons */
 .botonPrimario {
-    background-color: var(--color_primario);
-    border: 0;
+background-color: var(--color_primario);
     color: var(--blanco);
+}
+.botonPrimario:hover {
+    color: var(--color_primario);
+    background-color: var(--negro);
+}
+.botonPrimario, .formulario button {
+    border: 0;
     cursor: pointer;
     font-size: 0.95em;
     font-weight: 500;
@@ -114,9 +120,14 @@ p {
     padding: 0 20px;
     transition: var(--transicion);
 }
-.botonPrimario:hover {
-    color: var(--color_primario);
+.formulario button {
+    color: var(--blanco);
     background-color: var(--negro);
+}
+.formulario button:hover {
+    background-color: var(--color_primario);
+}
+.botonPrimario:hover, .formulario button:hover {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.3);
 }
 .botonPrimario:active {
@@ -586,6 +597,80 @@ ul.header-social a:hover .fa-whatsapp {
     left: inherit;
 }
 
+/* Transfer request section */
+.transfer-quote-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.transfer-cuote {
+    max-width: 950px;
+    margin: 0 30px;
+    display: grid;
+    grid-template: 170px 1fr auto / 1fr 240px;
+    grid-gap: 7px 20px;
+    grid-template-areas: "formulario-container type-transfer" 
+                         "formulario-container type-vehicle" 
+                         "formulario-container type-vehicle"
+                         "notes notes";
+}
+.transfer-cuote .formulario-container {
+    grid-area: formulario-container;
+}
+.transfer-cuote .type-transfer {
+    grid-area: type-transfer;
+}
+.transfer-cuote .type-vehicle {
+    grid-area: type-vehicle;
+}
+.transfer-cuote .notes {
+    grid-area: notes;
+    margin: 35px;
+}
+.transfer-cuote .type-transfer {
+    border-bottom: 8px solid var(--color_primario);
+}
+.transfer-cuote .type-vehicle {
+    position: relative;
+}
+.transfer-cuote .type-vehicle img {
+    width: 100%;
+    border: 1px solid #d1d3d1;
+}
+.transfer-cuote .type-vehicle a::before {
+    position: absolute;
+    content:url("../images/lnr-chevron-left.svg");
+    left: -5px;
+    top: 14px;
+    transform: scale(0.7);
+}
+.transfer-cuote .type-vehicle a {
+    display: inline-block;
+    color: var(--negro);
+    border-bottom: 1px solid black;
+    margin: 10px 0 10px 15px;
+    transition: var(--transicion);
+}
+.transfer-cuote .type-vehicle a:hover {
+    color: var(--color_primario);
+    border-bottom: 1px solid var(--color_primario);
+}
+.transfer-cuote .vehicle p {
+    margin: 0;
+    margin-top: 7px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+.transfer-cuote .type-vehicle button {
+    width: 100%;
+    height: 53px;
+    margin-top: 25px;
+    text-transform: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.2px
+}
+
 /* ::::::::::: ADITIONALS / ADICIONALES ::::::::::: */
 .avion {
     background: url('../images/avion.svg') no-repeat bottom center;
@@ -736,17 +821,70 @@ input[type='radio']:checked:after {
     background-color: var(--negro);
     transition: all 0.3s ease-in-out;
 }
+/* ----- Breadcrumb ----- */
+.breadcrumb-container {
+    padding-left: 25px;
+}
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.breadcrumb li {
+    margin: 14px 10px 10px;
+}
+.breadcrumb a {
+    color: #909090;
+    font-size: 0.85em;
+}
+.breadcrumb a:hover {
+    color: var(--color_primario);
+}
+.breadcrumb li:after {
+    content:url('../images/lnr-chevron-right.svg');
+    position: absolute;
+    transform: scale(0.7);
+    top: 31.7px;
+}
+.breadcrumb li:nth-of-type(3):after {
+    content: none;
+}
+.breadcrumb h1 {
+    font-size: 2.5em;
+    line-height: inherit;
+}
+
 /* ::::::::::: PARRAFOS ::::::::::: */
 .parrafo {
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
 }
+.parrafo.centrar {
+    text-align: center;
+}
+.parrafo .telefono {
+    font-size: 1.5em;
+}
+.parrafo .fa-whatsapp {
+    font-size: 2em;
+    margin-right: 5px;
+}
+.parrafo.contact-us a {
+    color: var(--verde);
+}
+.parrafo.contact-us a:hover {
+    color: black;
+}
 .alerta {
     border: 1px solid var(--color_primario);
     font-size: 0.85em;
     font-style: italic;
     padding: 8px;
+    display: inline-block;
+}
+.terminos {
+    line-height: 1em;
 }
 
 /* ::::::::::: BOXES (listado de productos Tours y Transfers) ::::::::::: */
@@ -832,7 +970,7 @@ input[type='radio']:checked:after {
     display: flex;
     justify-content: flex-end;
 }
-.box-item .box-buttons button {
+.box-item .box-buttons button, .type-vehicle button {
     color: var(--blanco);
     text-transform: uppercase;
     background-color: var(--negro);
@@ -841,7 +979,7 @@ input[type='radio']:checked:after {
     border: 0;
     transition: var(--transicion);
 }
-.box-item .box-buttons button:hover {
+.box-item .box-buttons button:hover, .type-vehicle button:hover {
     color: var(--negro);
     background-color: var(--color_primario);
 }
@@ -883,3 +1021,260 @@ input[type='radio']:checked:after {
     margin-left: -30px;
     margin-top: 2px;
 }
+/* ::::::: FORMULARIOS ::::::: */
+.formulario-container {
+    display: flex;
+    justify-content: center;
+}
+.formulario.w100 {
+    width: 100%;
+}
+.formulario.contact-us .columna-1 {
+    grid-area: columna-1;
+}
+.formulario.contact-us .columna-2 {
+    grid-area: columna-2;
+}
+.formulario.contact-us .mensaje {
+    grid-area: mensaje;
+}
+.formulario {
+    padding: 50px;
+    background-color: rgba(239, 239, 239, 0.8);
+}
+.formulario.contact-us {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: center;
+    grid-gap: 9px;
+    grid-template-areas: "columna-1 columna-2" 
+                         "mensaje mensaje" 
+                         "button button";
+}
+.formulario label {
+    display: block;
+    font-size: 0.9em;
+}
+.formulario input[type='text'], 
+.formulario input[type='email'],
+.formulario input[type='number'],
+.formulario textarea {
+    font-size: 0.85em;
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    margin: 2px 0 15px;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+.formulario input[type='checkbox'] {
+    padding: 5px;
+    outline: 0;
+    border:1px solid red;
+}
+.formulario input:focus, 
+.formulario textarea:focus, 
+.formulario input:hover, 
+.formulario textarea:hover {
+    border-bottom: 1px solid var(--color_primario);
+}
+.formulario textarea {
+    height: 150px;
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* --------- Checkbox */
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* ------------- Checkbox */
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--negro);
+  }
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: var(--gris_claro);
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--color_primario);
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
