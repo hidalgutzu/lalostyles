@@ -17,7 +17,6 @@
         width: 65vw;
     }     
 }
-
  /* ---------------- Small devices (phones) */
  @media (max-width: 575.98px) {
     .hideoverflow {
