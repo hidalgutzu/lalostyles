@@ -11,6 +11,7 @@
     --blanco: white;
     --gris: #7C7C7C;
     --gris_claro: #aaa;
+    --gris_clarox: #c3c3c3;
     --verde: #25D366;
     --negro_rgba: rgba(0,0,0,0.4);
     --blanco_rgba: rgba(255,255,255,0.5);
@@ -88,6 +89,9 @@ p {
     font-weight: lighter;
 }
 /* SELECTOR DE CLASES ----------------- */
+.hideoverflow {
+  overflow: hidden;
+}
 .hidden-desktop {
     display: none;
 }
@@ -173,7 +177,7 @@ div.preload-images {
 .header-socialAndQuote {
     right: 0;
     position: fixed !important;
-    z-index: 999;
+    z-index: 998;
 }
 .header-socialAndQuote ul {
     display: inline;
@@ -614,6 +618,18 @@ ul.header-social a:hover .fa-whatsapp {
                          "formulario-container type-vehicle"
                          "notes notes";
 }
+.transfer-cuote .type-transfer .roundtriponeway {
+  margin-top: 15px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+.transfer-cuote .type-transfer span {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.3em;  
+}
 .transfer-cuote .formulario-container {
     grid-area: formulario-container;
 }
@@ -807,19 +823,32 @@ ul.header-social a:hover .fa-whatsapp {
     width: 85%; /*Determina el ancho de los textos*/
     color: var(--negro);
 }
-input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
+input[type='radio'] {
+    cursor: pointer;
+    height: 25px;
+    width: 42px;
 
-    background-color: #d1d3d1;
+}
+input[type='radio'] ~ span {
+  color: var(--gris_clarox);
+}
+input[type='radio']:checked ~ span {
+    color: black;
+}
+
+input[type='radio']:after {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color:white;
     content: '';
     display: inline-block;
-    border: 2px solid white;
+    border: 2px solid var(--gris_clarox);
 }
 input[type='radio']:checked:after {
-    background-color: var(--negro);
-    transition: all 0.3s ease-in-out;
+    background: url('../images/radiochecked.svg') no-repeat center center;
+    background-color: var(--blanco);
+    border: 2px solid black;
 }
 /* ----- Breadcrumb ----- */
 .breadcrumb-container {
@@ -1055,9 +1084,11 @@ input[type='radio']:checked:after {
     display: block;
     font-size: 0.9em;
 }
-.formulario input[type='text'], 
+.formulario input[type='text'],
+.formulario select, 
 .formulario input[type='email'],
 .formulario input[type='number'],
+input[type='date'],
 .formulario textarea {
     font-size: 0.85em;
     width: 100%;
@@ -1066,6 +1097,9 @@ input[type='radio']:checked:after {
     margin: 2px 0 15px;
     border: 0;
     border-bottom: 1px solid black;
+}
+.formulario select {
+  height: 43px;
 }
 .formulario input[type='checkbox'] {
     padding: 5px;
@@ -1278,3 +1312,64 @@ input[type='radio']:checked:after {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  /* ::::::: FAST QUOTE MENU ::::::: */
+    .cssbkgrblack {
+      position: absolute;
+      background-color: rgba(0,0,0,0.55);
+      height: 1000vh;
+      width: 100vw;
+      z-index: 999;
+      top: 0;
+      bottom: 0;
+    }
+    .fast-quote-menu {
+        text-align: center;
+        position: fixed;
+        background: rgba(255,255,255,0.95);
+        z-index: 999;
+        height: 100vh;
+        right: -40vw;
+        top: 0;
+        width: 40vw;
+        transition: all 0.4s ease-in-out;
+    }
+    .fast-quote-menu.is-active {
+        right: 0vw;
+    }
+    .fast-quote-menu h1 {
+      font-size: 4em;
+      line-height: 0.5em;
+      margin-top: 7%;
+    }
+    .fast-quote-menu p {
+      padding: 0 15px;
+    }
+    .fast-quote-menu .formulario {
+      margin: 0 10%;
+    }
+    .fast-quote-menu a.boton-cerrar {
+        position: absolute;
+        background: url("../images/close.svg") no-repeat center center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        cursor: pointer;
+        margin: 7px 7px 0;
+        z-index: 9999;
+        transition: var(--transicion);
+    }
+    .fast-quote-menu a.boton-cerrar:hover {
+        background: url("../images/close-hover.svg") no-repeat center center;
+        background-size: 3em; 
+    }
+    .fast-quote-menu .boton-cerrar img {
+        width: 50px;
+    }
+    .fast-quote-menu .adultchildren {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 8px;
+    }
+    

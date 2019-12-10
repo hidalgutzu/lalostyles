@@ -23,6 +23,28 @@ function hide() {
     body.classList.remove('hideoverflow');
 }
 
+// ---------- MENÚ BOTÓN "FAST QUOTE" ----------
+const menufastquote = document.querySelector('.fast-quote-menu');
+const fastQuoteButton = document.querySelector('.fastquote-button');
+const fastQuoteButton2 = document.querySelector('.fastquote-button2');
+const closeFMButton = document.querySelector('#close-fast-menu');
+const bkgrblack = document.getElementById('bkgrblack');
+
+fastQuoteButton.addEventListener('click', show2)
+fastQuoteButton2.addEventListener('click', show2)
+closeFMButton.addEventListener('click', hide2)
+
+function show2() {
+   menufastquote.classList.add('is-active');
+   body.classList.add('hideoverflow');
+   bkgrblack.classList.add('cssbkgrblack');
+}
+function hide2() {
+   menufastquote.classList.remove('is-active');
+   body.classList.remove('hideoverflow');
+   bkgrblack.classList.remove('cssbkgrblack');
+}
+
 // ---------- LOAD IMAGE ----------
 // var imagen = document.getElementById('id1');
 // var newImg = new Image;

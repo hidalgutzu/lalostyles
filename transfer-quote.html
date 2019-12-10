@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 </head>
 <body class="avion body">
+<div class="bkgrblack"></div>
 <!-- ------------------------------------------ Header -->
     <header>
         <div class="pleca-blanca hidden-desktop"></div>
@@ -30,8 +31,8 @@
                     <li><a href="https://www.instagram.com/lalostyleservicemx/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://wa.me/5219981499718?text=Hi!%20soy%20Lalo!,%20ready%20to%20assist%20you"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
-                <button class="botonPrimario hidden">Get a Quote</button>
-                <a class="botonPrimario pen-square hidden-desktop" href="#"><i class="fas fa-user-edit"></i></a>
+                <button class="botonPrimario hidden fastquote-button">Get a Quote</button>
+                <a class="botonPrimario pen-square hidden-desktop fastquote-button2" href="#"><i class="fas fa-user-edit"></i></a>
             </div>
         </div>
 <!-- --------------- Nav -->
@@ -52,7 +53,61 @@
                 </ul>
             </nav>   
         </div>
-    </header>
+        <div class="" id="bkgrblack"></div>
+<!-- --------------- Fast-Quote Nav -->
+        <div class="fast-quote-menu">
+          <a href="#" class="boton-cerrar" id="close-fast-menu"></a>
+          <h1>Make a Fast Quote</h1>
+          <p>Fill the form below to make a Fast Quote. We will give you super fast response.</p>
+          <form action="" class="formulario">
+            <label>service:
+              <select form="" type="text" name="service" id="service">
+                <option value="">Transfer</option>
+                <option value="">Tours</option>
+                <option value="">Groups</option>
+            </label>
+            <label>Arrival:
+              <input type="date" name="departure" id="departure">
+            </label>
+            <label>Departure:
+                <input type="date" name="departure" id="departure">
+              </label>
+            <div class="adultchildren">
+                <label>Adults:
+                    <select name="adults" form="">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </label>
+                  <label>Children
+                    <select name="Children" form="">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+            </div>
+            <button>Send it!</button>
+          </form>
+        </div>
+</header>
 <!-- ------------------------------------------ Content -->
     <div class="breadcrumb-container">
         <ul class="breadcrumb">
@@ -130,8 +185,10 @@
           <!----- Seleccionar tipo de viaje -->
           <div class="item type-transfer">
             <img class="center" src="images/transfers/roundtrip_img.svg" alt="Lalostyles Transfer">
-            <input type="radio" class="roundtrip" id="roundtrip"><span>Round Trip</span>
-            <input type="radio" class="oneway" id="oneway"><span>One Way</span>
+            <div class="roundtriponeway">
+                <div><input type="radio" class="roundtrip" id="option" name="selecttransfertype"><span>Round Trip</span></div>
+                <div><input type="radio" class="oneway" id="oneway" name="selecttransfertype"><span>One Way</span></div>
+            </div>
           </div>
           <!----- Vehículo seleccionado -->
           <div class="item type-vehicle">

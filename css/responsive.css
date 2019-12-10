@@ -4,16 +4,24 @@
 
 /* ---------------- Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
+    .fast-quote-menu {
+        right: -70vw;
+        width: 60vw;
+    }   
  }
 
 /* ---------------- Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
+    .fast-quote-menu {
+        right: -65vw;
+        width: 65vw;
+    }     
 }
 
  /* ---------------- Small devices (phones) */
  @media (max-width: 575.98px) {
     .hideoverflow {
-        overflow: hidden
+        overflow: hidden;
     }
  /* ETIQUETAS --- */   
     h1 {
@@ -78,7 +86,7 @@
 
     /* ::: HEADER ::: */
     .header-logo-mobile {
-        z-index: 9999;
+        z-index: 998;
         padding: 13px 0;
         position: fixed;
         left: 40%;
@@ -117,7 +125,7 @@
     }
     .burger-menu {
         background: rgba(255,255,255,0.95);
-        z-index: 9999;
+        z-index: 998;
         height: 100vh;
         left: -100vw;
         width: 100vw;
@@ -137,6 +145,7 @@
     div.preload-images {
         background-size: contain;
     }
+      
     /* --- Header > Nav */
     .header-menuNav, .header-menuNav ul {
         display: inherit;
@@ -397,5 +406,10 @@
     }
     .reviews-list-fecha::after {
         content: none;
+    }
+    
+    .fast-quote-menu {
+        right: -85vw;
+        width: 85vw;
     }
  }
