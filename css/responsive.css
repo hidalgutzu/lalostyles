@@ -7,7 +7,7 @@
     .fast-quote-menu {
         right: -70vw;
         width: 60vw;
-    }   
+    }      
  }
 
 /* ---------------- Small devices (landscape phones, less than 768px) */
@@ -15,6 +15,16 @@
     .fast-quote-menu {
         right: -65vw;
         width: 65vw;
+    }
+    .formulario.contact-us {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 9px;
+        grid-template-areas: "columna-1 columna-1"
+                             "columna-2 columna-2" 
+                             "mensaje mensaje" 
+                             "button button";
     }     
 }
  /* ---------------- Small devices (phones) */
@@ -411,4 +421,48 @@
         right: -85vw;
         width: 85vw;
     }
+    .transfer-cuote {
+        max-width: 950px;
+        margin: 0 15px;
+        display: grid;
+        grid-template: 170px 1fr auto auto / 1fr;
+        grid-gap: 7px 20px;
+        grid-template-areas: "type-transfer" 
+                             "type-vehicle"
+                             "formulario-container"
+                             "notes";
+    }
+    .transfer-cuote .type-transfer .roundtriponeway {
+        display: flex;
+        margin-top: 0;
+      }
+    .transfer-cuote .type-transfer span {
+        margin-right: 10px;  
+      }
+      .transfer-cuote .type-transfer {
+        margin-top: 20px;
+    }
+      .breadcrumb {
+          margin-top: 60px;
+      }
+      .breadcrumb-container {
+        display: grid;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .transfer-cuote .type-vehicle button {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /* width: 50%;
+        float: left;
+        margin-top: 17px; */
+    }
+    .transfer-cuote .type-vehicle img {
+        width: 45%;
+        float: left;
+        margin-right: 15px;
+    }  
+
  }
