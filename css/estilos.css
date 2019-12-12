@@ -88,6 +88,25 @@ p {
     font-size: 1em;
     font-weight: lighter;
 }
+select {
+    height: 43px !important;
+    border-radius: 0 !important;
+    border: 0;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: inherit;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-image: url('../images/close.svg');
+    background-repeat: no-repeat;
+    background-position: right;    
+}
+select:hover {
+    border-bottom: 1px solid var(--color_primario);    
+}
+
 /* SELECTOR DE CLASES ----------------- */
 .hideoverflow {
   overflow: hidden;
@@ -105,6 +124,7 @@ p {
 .f-right {
     text-align: right;
 }
+
 /* --- start buttons */
 .botonPrimario {
 background-color: var(--color_primario);
@@ -1322,29 +1342,34 @@ input[type='date'],
       bottom: 0;
     }
     .fast-quote-menu {
-        text-align: center;
         position: fixed;
         background: rgba(255,255,255,0.95);
         z-index: 999;
         height: 100vh;
-        right: -40vw;
+        right: -35vw;
         top: 0;
-        width: 40vw;
+        width: 35vw;
         transition: all 0.4s ease-in-out;
+        overflow: auto;
     }
     .fast-quote-menu.is-active {
         right: 0vw;
     }
     .fast-quote-menu h1 {
-      font-size: 4em;
+      font-size: 2.6em;
       line-height: 0.5em;
-      margin-top: 7%;
+      margin: 8% 0 0 13%;
+      text-align: left;
     }
     .fast-quote-menu p {
-      padding: 0 15px;
+      padding: 0 40px;
     }
     .fast-quote-menu .formulario {
       margin: 0 10%;
+      padding: 30px 20px;
+    }
+    .fast-quote-menu button {
+        margin-top: 30px;
     }
     .fast-quote-menu a.boton-cerrar {
         position: absolute;
@@ -1370,4 +1395,5 @@ input[type='date'],
       grid-template-columns: auto auto;
       grid-gap: 8px;
     }
+    
     
