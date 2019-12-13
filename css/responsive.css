@@ -5,16 +5,29 @@
 /* ---------------- Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) { 
     .fast-quote-menu {
-        right: -70vw;
-        width: 60vw;
-    }      
+        right: -40vw;
+        width: 40vw;
+    }  
+    .fast-quote-menu .formulario {
+        margin: 0 5%;
+        padding: 30px 10px;
+    }    
  }
 
 /* ---------------- Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     .fast-quote-menu {
-        right: -65vw;
-        width: 65vw;
+        right: -50vw;
+        width: 50vw;
+    }
+    .fast-quote-menu h1 {
+        font-size: 2.2em;
+        margin: 10% 0 0 11%;
+        text-align: left;
+    }
+    .fast-quote-menu p {
+        padding: 0 25px;
+        margin-top: 30px;
     }
     .formulario.contact-us {
         display: grid;
