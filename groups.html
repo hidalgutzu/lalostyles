@@ -64,20 +64,20 @@
             <h1>Make a Fast Quote</h1>
             <p>We will send you the best options based on the date and number of people you indicate.</p>
             <form action="" class="formulario">
-            <legend>Información básica requerida</legend>
-            <label>service:
-            <select form="" type="text" name="service" id="service">
-                <option value="">Transfer</option>
-                <option value="">Tours</option>
-                <option value="">Groups</option>
-            </label>
-            <label>Arrival:
-            <input type="date" name="departure" id="departure">
-            </label>
-            <label>Departure:
-                <input type="date" name="departure" id="departure">
-            </label>
-            <div class="adultchildren">
+                <legend>Información básica requerida</legend>
+                <label>service:
+                <select form="" type="text" name="service" id="service">
+                    <option value="">Transfer</option>
+                    <option value="">Tours</option>
+                    <option value="">Groups</option>
+                </select>
+                <label>Arrival:
+                    <input class="unstyled" type="date" name="departure" id="departure">
+                </label>
+                <label>Departure:
+                    <input class="unstyled" type="date" name="departure" id="departure">
+                </label>
+              <div class="adultchildren">
                 <label>Adults:
                     <select class="select" name="adults" form="">
                     <option value="1">1</option>
@@ -95,7 +95,8 @@
                     </select>
                 </label>
                 <label>Children
-                    <select class="select" name="Children" form="">
+                <select class="select" name="Children" form="">
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -106,10 +107,16 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
-                    </select>
+                </select>
                 </label>
-            </div>
-            <button>Send it!</button>
+              </div>
+              <label>E-mail
+                <input type="email" name="email" id="email">
+            </label>
+            <label>Phone
+                <input type="number" name="phone" id="phone">
+            </label>
+              <button>Send it!</button>
             </form>
         </div>
     </header>
@@ -146,8 +153,7 @@
         <div class="footer-menu">
             <ul>
                 <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
-                <li><a href="privacy-policies.html">Políticas de Privacidad</a></li>
-                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </div>

@@ -115,9 +115,17 @@ select, input[type='date'] {
     padding: 0 20px;
     width: 100%;
     margin-bottom: 15px;
-    background-image: url('../images/close.svg');
+    background-image: url('../images/arrow-down.svg');
     background-repeat: no-repeat;
     background-position: right;    
+}
+.unstyled {
+    -webkit-appearance: none;
+}
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 select:hover {
     border-bottom: 1px solid var(--color_primario);    
@@ -1089,24 +1097,38 @@ input[type='radio']:checked:after {
 .box-item .box-buttons a:hover {
     color: var(--color_primario);
 }
-/* ::::::::::: INCLUSIONS ::::::::::: */
-.inclusions {
+/* ::::::::::: INCLUSIONS y LISTADOUL ::::::::::: */
+.inclusions, .listadoUl {
     width: 100%;
     max-width: 700px;
     margin: 50px auto 0 auto;
 }
-.inclusions ul {
+.inclusions ul, .listadoUl ul {
     font-style: italic;
     font-weight: lighter;
     line-height: 2em;
 }
-.inclusions li {
+.listadoUl ul {
+    line-height: 1.5em;
+}
+.inclusions li, .listadoUl li {
     position: relative;
     padding-left: 30px;
+}
+.listadoUl li {
+    margin-bottom: 20px;
 }
 .inclusions ul li::before {
     position: absolute;
     content: url(../images/lnr-checkmark-circle.svg);
+    width: 30px;
+    height: 80px;
+    margin-left: -30px;
+    margin-top: 2px;
+}
+.listadoUl ul li::before {
+    position: absolute;
+    content: url(../images/li-bullet.svg);
     width: 30px;
     height: 80px;
     margin-left: -30px;
@@ -1432,10 +1454,16 @@ input[type='date'],
     .fast-quote-menu .boton-cerrar img {
         width: 50px;
     }
-    .fast-quote-menu .adultchildren {
+    .fast-quote-menu .adultchildren, .arrivaldeparture {
       display: grid;
       grid-template-columns: auto auto;
       grid-gap: 8px;
+    }
+    .arrivaldeparture input {
+        display: block;
+    }
+    .arrivaldeparture label {
+        width: 68%;
     }
     
     
